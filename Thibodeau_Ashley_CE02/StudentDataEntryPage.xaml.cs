@@ -17,8 +17,6 @@ namespace Thibodeau_Ashley_CE02
         public StudentDataEntryPage()
         {
             InitializeComponent();
-
-            
         }
     }
 }

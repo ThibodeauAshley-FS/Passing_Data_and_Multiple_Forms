@@ -21,10 +21,10 @@ namespace Thibodeau_Ashley_CE02
 
         private void AddButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new StudentDataEntryPage
+            Navigation.PushAsync(new StudentDataEntryPagePage
             {
                 BindingContext = passedStudentData
-
+              
             });
         }
     }
