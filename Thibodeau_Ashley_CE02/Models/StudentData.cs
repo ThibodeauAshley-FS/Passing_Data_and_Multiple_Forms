@@ -6,12 +6,13 @@
  
  */
 using System;
+
 namespace Thibodeau_Ashley_CE02.Models
 {
     public class StudentData
     {
-        public StudentData()
-        {
-        }
+        public string Name { get; set; }
+        public Double Age { get; set; }
+        public DateTime StartDate { get; set; }
     }
 }
