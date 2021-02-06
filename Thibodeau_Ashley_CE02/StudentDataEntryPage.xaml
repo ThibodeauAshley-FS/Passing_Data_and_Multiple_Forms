@@ -20,13 +20,13 @@
            </Grid.RowDefinitions>
 
            <Label x:Name="ageLabel" Text="Age:" VerticalOptions="Center"/>
-           <Stepper Minimum="0" Maximum="100" Increment="1" Grid.Column="1"/>
+           <Stepper x:Name="ageStepper" Minimum="0" Maximum="100" Increment="1" Grid.Column="1"/>
 
            <Label Text="Date Picker:" VerticalOptions="Center" Grid.Row="1"/>
-           <DatePicker Grid.Row="1" Grid.Column="1"/>
+           <DatePicker x:Name="startDatePicker" Grid.Row="1" Grid.Column="1"/>
 
            <Button x:Name="saveButton" Text="Save" Grid.Row="3"/>
-           <Button x:Name="canelButton" Text="Cancel" Grid.Row="3" Grid.Column="1"/>
+           <Button x:Name="cancelButton" Text="Cancel" Grid.Row="3" Grid.Column="1"/>
        </Grid>
 
 
