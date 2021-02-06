@@ -14,5 +14,6 @@ namespace Thibodeau_Ashley_CE02.Models
         public string Name { get; set; }
         public Double Age { get; set; }
         public DateTime StartDate { get; set; }
+        public bool Active { get; set; }
     }
 }

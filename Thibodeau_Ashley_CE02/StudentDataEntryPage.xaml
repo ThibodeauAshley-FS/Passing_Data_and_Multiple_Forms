@@ -8,10 +8,12 @@
 -->
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Thibodeau_Ashley_CE02.StudentDataEntryPage">
    <StackLayout Margin="20" Padding="10">
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="10">
+            <Label Text="Student Entry" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+        </Frame>
+       <Entry x:Name="nameEntry" Placeholder="Enter Name Here" Margin="15,0"/>
 
-       <Entry x:Name="nameEntry" Placeholder="Enter Name Here"/>
-
-       <Grid>
+       <Grid Margin="25,0">
            <Grid.ColumnDefinitions>
                <ColumnDefinition Width="*" />
            </Grid.ColumnDefinitions>
@@ -25,8 +27,11 @@
            <Label Text="Date Picker:" VerticalOptions="Center" Grid.Row="1"/>
            <DatePicker x:Name="startDatePicker" Grid.Row="1" Grid.Column="1"/>
 
-           <Button x:Name="saveButton" Text="Save" Grid.Row="3"/>
-           <Button x:Name="cancelButton" Text="Cancel" Grid.Row="3" Grid.Column="1"/>
+           <Label Text="Active Student:" VerticalOptions="Center" Grid.Row="2"/>
+           <Switch x:Name="activeToggle" IsToggled="false" Grid.Row="2" Grid.Column="1" />
+
+           <Button x:Name="saveButton" Text="Save" Grid.Row="4"/>
+           <Button x:Name="cancelButton" Text="Cancel" Grid.Row="4" Grid.Column="1"/>
        </Grid>
 
 

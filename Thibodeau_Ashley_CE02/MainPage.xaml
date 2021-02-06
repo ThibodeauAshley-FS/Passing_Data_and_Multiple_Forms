@@ -10,15 +10,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Thibodeau_Ashley_CE02.MainPage">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Code Exercise 2" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+    <StackLayout Margin="20" Padding="10">
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="10" Margin="0,0,0,20">
+            <Label Text="Code Exercise 2" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" />
         </Frame>
+        <Grid Margin="20,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
 
-        <Label x:Name="nameLabel" Text="Name: " />
-        <Label x:Name="ageLabel" Text="Age: " />
-        <Label x:Name="startDateLabel" Text="Start Date:" />
-        <Button x:Name="addButton" Text="New" />
+            <Label x:Name="activeLabel" Text="Inactive Student Account" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes="Bold" BackgroundColor="DarkRed" TextColor="White" Padding="25,5"/>
+            <Label x:Name="nameLabel" Grid.Row="1" Text="Name: " VerticalOptions="Center"/>
+            <Label x:Name="ageLabel" Text="Age: " Grid.Row="2" VerticalOptions="Center"/>
+            <Label x:Name="startDateLabel" Text="Start Date:" Grid.Row="3" VerticalOptions="Center"/>
+            
+            <Button x:Name="addButton" Text="New" Grid.Row="4" Grid.Column="2" VerticalOptions="Center"/>
+        </Grid>
+        
     </StackLayout>
 
 </ContentPage>

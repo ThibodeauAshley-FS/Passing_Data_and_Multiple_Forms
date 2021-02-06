@@ -25,6 +25,19 @@ namespace Thibodeau_Ashley_CE02
 
             if(passedStudentData.Name != null)
             {
+                if(passedStudentData.Active == false)
+                {
+                    activeLabel.Text = "Inactive Student Account";
+                    activeLabel.BackgroundColor = Color.DarkRed;
+                    activeLabel.TextColor = Color.White;
+                }
+                else
+                {
+                    activeLabel.Text = "Active Student Account";
+                    activeLabel.BackgroundColor = Color.GreenYellow;
+                    activeLabel.TextColor = Color.Green;
+                }
+
                 nameLabel.Text = "Name: " + passedStudentData.Name;
                 ageLabel.Text = "Age: " + passedStudentData.Age;
                 startDateLabel.Text = "Start Date: " + passedStudentData.StartDate.ToString();
