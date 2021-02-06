@@ -7,6 +7,32 @@
     GitHub Link: https://github.com/InterfaceProgramming/ce2-ThibodeauAshley-FS
 -->
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Thibodeau_Ashley_CE02.StudentDataEntry">
-    <ContentPage.Content>
-    </ContentPage.Content>
+<StackLayout Padding="10" Margin="10">
+<Entry x:Name="nameEntry" Placeholder="Enter Name Here" />
+<Grid>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+
+    <Label x:Name="ageLabel" Text="Age:" VerticalOptions="Center"/>
+        <Stepper x:Name="ageStepper" Minimum="0" Maximum="100" Increment="1" Grid.Column="1" />
+    <Label Text="Start Date:" VerticalOptions="Center" Grid.Row="1"/>
+        <DatePicker x:Name="startDatePicker" Grid.Row="1" Grid.Column="1" />
+
+    <Button x:Name="saveButton" Text="Save" Grid.Row="4"/>
+    <Button x:Name="cancelButton" Text="Cancel" Grid.Row="4" Grid.Column="1"/>
+
+</Grid>
+
+</StackLayout>
+
+
+
+
+
+
+
 </ContentPage>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Ashley Thibodeau
+    Interface Programming
+    C20210201
+    Code Exercise 2
+    GitHub Link: https://github.com/InterfaceProgramming/ce2-ThibodeauAshley-FS
+-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Thibodeau_Ashley_CE02.StudentDataEntry">
+    <ContentPage.Content>
+    </ContentPage.Content>
+</ContentPage>
