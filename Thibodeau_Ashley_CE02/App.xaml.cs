@@ -17,7 +17,7 @@ namespace Thibodeau_Ashley_CE02
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
