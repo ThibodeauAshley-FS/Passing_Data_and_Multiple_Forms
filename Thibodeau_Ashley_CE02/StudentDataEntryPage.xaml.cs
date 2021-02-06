@@ -12,11 +12,13 @@ using Xamarin.Forms;
 
 namespace Thibodeau_Ashley_CE02
 {
-    public partial class StudentDataEntry : ContentPage
+    public partial class StudentDataEntryPage : ContentPage
     {
-        public StudentDataEntry()
+        public StudentDataEntryPage()
         {
             InitializeComponent();
+
+            
         }
     }
 }

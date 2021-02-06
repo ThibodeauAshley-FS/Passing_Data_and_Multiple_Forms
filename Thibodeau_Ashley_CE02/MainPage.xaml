@@ -14,6 +14,7 @@
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
+
         <Label x:Name="nameLabel" Text="Name: " />
         <Label x:Name="ageLabel" Text="Age: " />
         <Label x:Name="startDateLabel" Text="Start Date:" />
