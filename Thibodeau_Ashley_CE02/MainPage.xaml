@@ -25,7 +25,7 @@
             <Label x:Name="activeLabel" Text="Inactive Student Account" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes="Bold" BackgroundColor="DarkRed" TextColor="White" Padding="25,5"/>
             <Label x:Name="nameLabel" Grid.Row="1" Text="Name: " VerticalOptions="Center"/>
             <Label x:Name="ageLabel" Text="Age: " Grid.Row="2" VerticalOptions="Center"/>
-            <Label x:Name="startDateLabel" Text="Start Date:" Grid.Row="3" VerticalOptions="Center"/>
+            <Label x:Name="startDateLabel" Text="Start Date:" Grid.Row="3" VerticalOptions="Center" Grid.Column="0" Grid.ColumnSpan="3"/>
             
             <Button x:Name="addButton" Text="New" Grid.Row="4" Grid.Column="2" VerticalOptions="Center"/>
         </Grid>

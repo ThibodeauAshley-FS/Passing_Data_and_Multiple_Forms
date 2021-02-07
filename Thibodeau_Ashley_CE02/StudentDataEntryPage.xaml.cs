@@ -36,7 +36,7 @@ namespace Thibodeau_Ashley_CE02
                 ageLabel.Text = bindingObject.Age.ToString();
                 ageStepper.Value = bindingObject.Age;
                 startDatePicker.Date = bindingObject.StartDate;
-                activeToggle.IsToggled = bindingObject.Active;
+                activeToggle.IsToggled = bindingObject.ActiveStudentToggle;
 
             }
         }
@@ -47,7 +47,7 @@ namespace Thibodeau_Ashley_CE02
             bindingObject.Name = nameEntry.Text;
             bindingObject.Age = ageStepper.Value;
             bindingObject.StartDate = startDatePicker.Date;
-            bindingObject.Active = activeToggle.IsToggled;
+            bindingObject.ActiveStudentToggle = activeToggle.IsToggled;
 
             Navigation.PopAsync();
         }

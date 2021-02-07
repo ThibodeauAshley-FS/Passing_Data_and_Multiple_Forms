@@ -17,14 +17,25 @@ namespace Thibodeau_Ashley_CE02
         {
             InitializeComponent();
 
+            bool fileCheck = passedStudentData.FileCheck();
+
+            if(fileCheck == true)
+            {
+                saveButton.Margin = new Thickness(0, 0, 20, 0);
+                loadButton.IsVisible = true;
+            }
+
             if(loadButton.IsVisible != true)
             {
                 saveButton.Margin = new Thickness(0,0,130,0);
             }
 
             saveButton.Clicked += SaveButton_Clicked;
+
             clearButton.Clicked += ClearButton_Clicked;
+
             loadButton.Clicked += LoadButton_Clicked;
+
             addButton.Clicked += AddButton_Clicked;
         }
 
@@ -32,7 +43,7 @@ namespace Thibodeau_Ashley_CE02
         {
             if (passedStudentData.Name != null)
             {
-                passedStudentData.SaveFile(passedStudentData.Name, passedStudentData.Age, passedStudentData.StartDate, passedStudentData.Active);
+                passedStudentData.SaveFile(passedStudentData.Name, passedStudentData.Age, passedStudentData.StartDate, passedStudentData.ActiveStudentToggle);
 
                 saveButton.Margin = new Thickness(0, 0, 20, 0);
                 loadButton.IsVisible = true;
@@ -43,11 +54,28 @@ namespace Thibodeau_Ashley_CE02
         private void LoadButton_Clicked(object sender, EventArgs e)
         {
             passedStudentData = passedStudentData.LoadFile();
+
+            InfoDisplay();
+
         }
 
         private void ClearButton_Clicked(object sender, EventArgs e)
         {
-            
+            passedStudentData = passedStudentData.Clear();
+
+            activeLabel.Text = "Inactive Student Account";
+            activeLabel.BackgroundColor = Color.DarkRed;
+            activeLabel.TextColor = Color.White;
+
+            nameLabel.Text = "Name:";
+            ageLabel.Text = "Age:";
+            startDateLabel.Text = "Start Date:";
+
+            addButton.Text = "New";
+
+            saveButton.Margin = new Thickness(0,0,130,0);
+            loadButton.IsVisible = false;
+
         }
 
 
@@ -56,9 +84,14 @@ namespace Thibodeau_Ashley_CE02
         {
             base.OnAppearing();
 
-            if(passedStudentData.Name != null)
+            InfoDisplay();
+        }
+
+        private void InfoDisplay()
+        {
+            if (passedStudentData.Name != null)
             {
-                if(passedStudentData.Active == false)
+                if (passedStudentData.ActiveStudentToggle == false)
                 {
                     activeLabel.Text = "Inactive Student Account";
                     activeLabel.BackgroundColor = Color.DarkRed;
@@ -77,6 +110,7 @@ namespace Thibodeau_Ashley_CE02
 
                 addButton.Text = "Edit";
             }
+
         }
 
         private void AddButton_Clicked(object sender, EventArgs e)
