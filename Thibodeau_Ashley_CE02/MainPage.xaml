@@ -29,6 +29,11 @@
             
             <Button x:Name="addButton" Text="New" Grid.Row="4" Grid.Column="2" VerticalOptions="Center"/>
         </Grid>
+        <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
+            <Button x:Name="saveButton" Text="Save" Margin="0,0,20,0" Padding="25,5"/>
+            <Button x:Name="loadButton" Text="Load" Padding="25,5" IsVisible="False"/>
+            <Button x:Name="clearButton" Text="Clear" Margin="20,0,0,0" Padding="25,5"/>
+        </StackLayout>
         
     </StackLayout>
 
